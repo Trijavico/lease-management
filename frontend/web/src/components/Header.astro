@@ -1,0 +1,85 @@
+---
+
+---
+
+<header class="header_navigation">
+    <nav>
+        <ul>
+            <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg></li>
+            <li>Dashboard</li>
+            <li>Properties</li>
+            <li>Tenants</li>
+            <li>Reports</li>
+        </ul>
+    </nav>
+    <form action="" class="search_bar">
+        <input
+            type="text"
+            name="property_name"
+            id="search_input"
+            placeholder="Search properties..."
+            >
+    </form>
+
+    <div class="user_account">
+        <img src="" alt="">
+    </div>
+</header>
+
+<style>
+
+    .header_navigation{
+        display: flex;
+        align-items: center;
+        padding-block: 15px;
+        padding-inline: 25px;
+        border-bottom: 1px solid #80808048;
+
+        nav ul{
+            --tw-text-opacity: 1;
+            
+            gap: 20px;
+            display: flex;
+            font-weight: 500;
+            font-size: 0.875rem;
+            align-items: center;
+            color: rgb(107 114 128 / var(--tw-text-opacity));
+        }
+
+        nav ul li:nth-child(1){
+            height: 1.5rem;
+            color: #13151a;
+        }
+
+        nav ul li:nth-child(2){
+            font-weight: 700;
+            color: #13151a;
+        }
+    }
+
+    .search_bar{
+        padding-block: 5px;
+        padding-inline: 15px;
+        border-radius: 5px;
+        margin-inline-end: 20px;
+        margin-inline-start: auto;
+        border: 1px solid #6b728060;
+
+        input{
+            border: none;
+            outline: none;
+            font-size: .92rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    .user_account{
+        width: 30px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: #6b728060;
+    }
+
+    
+    
+</style>

@@ -1,0 +1,175 @@
+---
+import Header from "../components/Header.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Dashboard">
+	<Header />
+	<section class="cards_section">
+		<div class="card">
+			<header>
+				<h2>Total Properties</h2>
+				<span>SVG</span>
+			</header>
+
+			<p class="amount">25</p>
+			<p class="subtitle">+2 since last month</p>
+		</div>
+
+		<div class="card">
+			<header>
+				<h2>Total Properties</h2>
+				<span>SVG</span>
+			</header>
+
+			<p class="amount">25</p>
+			<p class="subtitle">+2 since last month</p>
+		</div>
+
+		<div class="card">
+			<header>
+				<h2>Total Properties</h2>
+				<span>SVG</span>
+			</header>
+
+			<p class="amount">25</p>
+			<p class="subtitle">+2 since last month</p>
+		</div>
+	</section>
+
+	<section class="table_section">
+		<table>
+			<thead>
+			   <tr>
+				  <th>Property</th>
+				  <th>Address</th>
+				  <th>Rental Price</th>
+				  <th>Tenant</th>
+			   </tr>
+			</thead>
+			<tbody>
+			   <tr>
+				  <td>Codigo</td>
+				  <td>123 Main St, City, State</td>
+				  <td>$1,200</td>
+				  <td>John Doe</td>
+			   </tr>
+
+			   <tr>
+				<td>Codigo</td>
+				<td>456 Oak St, City, State</td>
+				<td>$1,500</td>
+				<td>Jane Smith</td>
+			 </tr>
+
+			 <tr>
+				<td>Codigo</td>
+				<td>789 Pine St, City, State</td>
+				<td>$1,000</td>
+				<td>Bob Johnson</td>
+			 </tr>
+
+			 <tr>
+				<td>Codigo</td>
+				<td>321 Elm St, City, State</td>
+				<td>$1,300</td>
+				<td>Alice Williams</td>
+			 </tr>
+			</tbody>
+		</table>
+	</section>
+
+</Layout>
+
+<style>
+
+
+	/*------ TABLE COMPONENT ------- */
+
+	.cards_section{
+		padding-inline: 35px;
+		padding-block-start: 35px;
+
+		gap: 20px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		
+		.card{
+			padding: 20px;
+			border-radius: 10px;
+			border: 1px solid #ccc;
+
+			header{
+				display: flex;
+				font-size: 0.82rem;
+				align-items: center;
+				justify-content: space-between;
+
+				h2{
+					font-weight: 500;
+					font-size: 0.975rem;
+				}
+			}
+
+			.subtitle{
+				padding-block-start: 3px;
+				font-size: 15px;
+				color: rgb(107 114 128 / 1);
+				
+			}
+
+			.amount{
+				font-weight: 700;
+				font-size: 1.5rem;
+				padding-block-start: 25px;
+			}
+		}
+	}
+
+	.table_section{
+		padding-block-start: 35px;
+		padding-inline: 35px;
+	}
+
+	table {
+		width: 100%;
+		margin-top: 16px;
+		position: relative;
+		isolation: isolate;
+		border-collapse: collapse;
+
+		font-size: 0.875rem;
+
+		&::before{
+			z-index: -1;
+			inset: -0.0625rem;
+			content: '';
+			z-index: -1px;
+			position: absolute;
+			border: .0625rem solid #ccc;
+			border-radius: .625rem;
+		}
+
+		th, td {
+			padding: 16px;
+			text-align: left;
+		}
+
+		th{
+			font-weight: 500;
+			color: rgb(107 114 128 / 1);
+		}
+
+		thead tr{
+			border-bottom: .0625rem solid #ccc;
+		}
+
+		tbody > tr:not(:last-child){
+			border-bottom: .0625rem solid #ccc;
+		}
+
+		tr:hover {
+			background-color: #e9e9e9;
+		}
+	}
+</style>
